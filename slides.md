@@ -12,6 +12,7 @@ layout: cover
 
 # About me
 
+- Matt Jones
 - App framework - bundler team
 - Working on Atlaspack
 
@@ -21,11 +22,10 @@ layout: center
 
 # Atlaspack
 
----
-layout: center
----
-
-# Why have a custom bundler?
+<!--
+- Why fork?
+- Specific to Atlaspack, the ideas are mostly the same across different bundlers
+-->
 
 ---
 layout: center
@@ -220,7 +220,7 @@ export function App() {
 
 ```js {all|1-2|4|3|12-25|all}{maxHeight:'393px',at:1}
 var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactDefault = atlaspackHelpers.interopDefault(_react);
 async function askAI(question) {
   const ai = await require("dd327547f2991049");
   const answer = await ai(question);
@@ -608,9 +608,9 @@ export function log(value) {
     ],
     "2wZan": [
       function (require, module, exports, __globalThis) {
-        var parcelHelpers = require("@atlaspack/transformer-js/src/esmodule-helpers.js");
-        parcelHelpers.defineInteropFlag(exports);
-        parcelHelpers.export(exports, "log", () => log);
+        var atlaspackHelpers = require("@atlaspack/transformer-js/src/esmodule-helpers.js");
+        atlaspackHelpers.defineInteropFlag(exports);
+        atlaspackHelpers.export(exports, "log", () => log);
         function log(value) {
           console.log(value);
         }
@@ -726,7 +726,7 @@ export function log(value) {
 
 <div class="flex flex-col justify-center h-full gap-10">
 
-```js {all|7|2-4|3|4|7|all}{at:1}
+```js {all|7|2-5|3|4|7|all}{at:1}
 // entry-bundle.js
 var $63d67f$exports = {};
 $63d67f$exports = import("./logger-bundle.js").then(() =>
