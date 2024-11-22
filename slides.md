@@ -6,6 +6,11 @@ theme: the-unnamed
 
 Breaking one app into thousands of chunks
 
+<!--
+- TIMER START
+- Lots of content, so we're gonna go fast
+-->
+
 ---
 layout: cover
 ---
@@ -69,6 +74,11 @@ App.js -- react --> node_modules/react.js
 App.js -. "import(./Async)" .-> Async.js
 Async.js -- react --> node_modules/react.js
 ```
+
+<!--
+- Boxes are Assets
+- Line are Dependencies
+-->
 
 ---
 layout: two-cols
